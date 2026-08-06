@@ -3,7 +3,7 @@
 > Official project repository for **Smart Markdown Web Scraper API** hosted on [RapidAPI](https://rapidapi.com/modialmadih/api/smart-markdown-web-scraper).
 > Includes SDKs, framework integrations, Chrome Extension, interactive landing page, and full marketing growth kits.
 
-![Marketing Banner](marketing/marketing_banner.jpg)
+👉 **Live Demo & Playground**: [https://almadih.github.io/smart-markdown-web-scraper-api/](https://almadih.github.io/smart-markdown-web-scraper-api/)
 
 ---
 
@@ -20,17 +20,16 @@ scraper-api/
 │   ├── python/                    # Python SDK (`smart_markdown_scraper.py`)
 │   └── nodejs/                    # Node.js SDK (`index.js`)
 ├── integrations/                  # AI Framework Connectors
-│   └── langchain_loader.py        # LangChain Document Loader integration
+│   ├── langchain_loader.py        # LangChain Document Loader integration
+│   └── llamaindex_reader.py       # LlamaIndex Document Reader integration
 ├── cli/                           # Command Line Interface Tool
 │   └── smart_md.py                # Terminal tool (`smart-md`)
 ├── chrome-extension/              # Browser Extension (Manifest V3)
 │   ├── manifest.json              # Extension manifest
 │   ├── popup.html                 # Popup interface
 │   └── popup.js                   # API caller & clipboard logic
-└── marketing/                     # Growth & Marketing Campaign Kits
-    ├── launch_kit_phase1.md       # Dev.to articles, Reddit, HN & X threads
-    ├── outreach_kit_phase2.md     # Cold email sequence & CrewAI tutorials
-    └── marketing_banner.jpg       # High-res marketing visual asset
+└── .github/workflows/             # GitHub CI/CD Workflows
+    └── deploy-pages.yml           # Auto-deploys landing-page to GitHub Pages
 ```
 
 ---
@@ -59,12 +58,9 @@ loader = SmartMarkdownWebLoader(urls=["https://example.com"], rapidapi_key="YOUR
 docs = loader.load()
 ```
 
-### 4. Interactive Demo Landing Page (`landing-page/`)
-Deploy the contents of `landing-page/` to Vercel, Netlify, or GitHub Pages to provide an interactive playground that converts users to your RapidAPI subscription plans.
-
 ---
 
 ## 🔗 Key Links
+- **Live Interactive Playground**: [https://almadih.github.io/smart-markdown-scraper-api/](https://almadih.github.io/smart-markdown-web-scraper-api/)
 - **RapidAPI Hub Page**: [https://rapidapi.com/modialmadih/api/smart-markdown-web-scraper](https://rapidapi.com/modialmadih/api/smart-markdown-web-scraper)
-- **Phase 1 Launch Kit**: [`marketing/launch_kit_phase1.md`](marketing/launch_kit_phase1.md)
-- **Phase 2 Outreach Kit**: [`marketing/outreach_kit_phase2.md`](marketing/outreach_kit_phase2.md)
+- **Dev.to Tutorial**: [Why HTML Scraping Fails for LLMs](https://dev.to/almadih/why-html-scraping-fails-for-llms-and-how-to-extract-clean-markdown-in-3-lines-of-code-3op8)
