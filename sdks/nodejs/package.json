@@ -1,0 +1,25 @@
+{
+  "name": "smart-markdown-scraper",
+  "version": "1.0.0",
+  "description": "Node.js SDK for Smart Markdown Web Scraper API on RapidAPI. Convert any web page to clean Markdown for LLMs.",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "keywords": [
+    "rapidapi",
+    "web-scraping",
+    "markdown",
+    "llm",
+    "rag",
+    "ai-agent",
+    "openai",
+    "langchain"
+  ],
+  "author": "Modi Almadih",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/modialmadih/smart-markdown-scraper"
+  }
+}
