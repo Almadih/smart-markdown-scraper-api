@@ -3,7 +3,7 @@
 > Official project repository for **Smart Markdown Web Scraper API** hosted on [RapidAPI](https://rapidapi.com/modialmadih/api/smart-markdown-web-scraper).
 > Includes SDKs, framework integrations, Chrome Extension, interactive landing page, and full marketing growth kits.
 
-👉 **Live Demo & Playground**: [https://almadih.github.io/smart-markdown-web-scraper-api/](https://almadih.github.io/smart-markdown-web-scraper-api/)
+👉 **Live Demo & Playground**: [https://almadih.github.io/smart-markdown-scraper-api/](https://almadih.github.io/smart-markdown-scraper-api/)
 
 ---
 
@@ -61,6 +61,6 @@ docs = loader.load()
 ---
 
 ## 🔗 Key Links
-- **Live Interactive Playground**: [https://almadih.github.io/smart-markdown-scraper-api/](https://almadih.github.io/smart-markdown-web-scraper-api/)
+- **Live Interactive Playground**: [https://almadih.github.io/smart-markdown-scraper-api/](https://almadih.github.io/smart-markdown-scraper-api/)
 - **RapidAPI Hub Page**: [https://rapidapi.com/modialmadih/api/smart-markdown-web-scraper](https://rapidapi.com/modialmadih/api/smart-markdown-web-scraper)
 - **Dev.to Tutorial**: [Why HTML Scraping Fails for LLMs](https://dev.to/almadih/why-html-scraping-fails-for-llms-and-how-to-extract-clean-markdown-in-3-lines-of-code-3op8)
