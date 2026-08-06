@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "Smart Markdown Web Scraper for LLMs",
+  "version": "1.0.0",
+  "description": "Convert any webpage into clean, LLM-ready Markdown in 1-click via Smart Markdown Web Scraper API on RapidAPI.",
+  "permissions": [
+    "activeTab",
+    "storage",
+    "clipboardWrite"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Copy LLM Markdown"
+  }
+}

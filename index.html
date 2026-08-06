@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Markdown Web Scraper API | Clean Web Scraping for LLMs & AI Agents</title>
+  <meta name="description" content="Convert any webpage URL into clean, structured Markdown format optimized for LLMs, RAG applications, and AI agents. Try live playground and subscribe on RapidAPI.">
+  <meta name="keywords" content="web scraping api, markdown api, llm scraper, rag pipeline, python web scraper, rapidapi, openai prompt optimization">
+  
+  <!-- OpenGraph Meta Tags -->
+  <meta property="og:title" content="Smart Markdown Web Scraper API | LLM Ready Web Scraping">
+  <meta property="og:description" content="Scrape any webpage into clean, token-efficient Markdown for GPT-4, Claude 3.5, and RAG pipelines. Save 85%+ on prompt token costs.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://rapidapi.com/modialmadih/api/smart-markdown-web-scraper">
+  <meta property="og:image" content="../marketing/marketing_banner.jpg">
+
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Smart Markdown Web Scraper API for LLMs">
+  <meta name="twitter:description" content="Convert web pages to clean Markdown in milliseconds. Built for AI agents, LangChain, and RAG apps.">
+  <meta name="twitter:image" content="../marketing/marketing_banner.jpg">
+
+  <!-- Schema.org JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Smart Markdown Web Scraper API",
+    "operatingSystem": "All",
+    "applicationCategory": "DeveloperApplication",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "url": "https://rapidapi.com/modialmadih/api/smart-markdown-web-scraper"
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header / Navigation -->
+  <nav class="navbar">
+    <div class="container nav-container">
+      <div class="logo">
+        <span class="logo-icon">⚡</span>
+        <span class="logo-text">Smart<span class="highlight">Markdown</span> API</span>
+      </div>
+      <div class="nav-links">
+        <a href="#playground">Playground</a>
+        <a href="#features">Features</a>
+        <a href="#pricing">Pricing</a>
+        <a href="https://dev.to/almadih/why-html-scraping-fails-for-llms-and-how-to-extract-clean-markdown-in-3-lines-of-code-3op8" target="_blank">Blog Tutorial</a>
+        <a href="https://rapidapi.com/modialmadih/api/smart-markdown-web-scraper" target="_blank" class="btn btn-primary nav-cta">Get API Key on RapidAPI</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="container hero-container">
+      <div class="badge">🔥 Optimized for GPT-4, Claude 3.5, & RAG Pipelines</div>
+      <h1 class="hero-title">Scrape Any Webpage into <span class="gradient-text">Clean Markdown</span> for AI Agents</h1>
+      <p class="hero-subtitle">
+        Stop feeding bloated HTML and tracking scripts into LLMs. Convert any URL into token-efficient, perfectly structured Markdown in milliseconds via RapidAPI.
+      </p>
+      <div class="hero-actions">
+        <a href="https://rapidapi.com/modialmadih/api/smart-markdown-web-scraper" target="_blank" class="btn btn-hero-primary">Start Free on RapidAPI →</a>
+        <a href="#playground" class="btn btn-hero-secondary">Try Live Playground</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <span class="stat-value">99.7%</span>
+          <span class="stat-label">Token Cost Savings</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-value">&lt;300ms</span>
+          <span class="stat-label">Avg Response Time</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-value">100%</span>
+          <span class="stat-label">LLM Ready</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Playground Section -->
+  <section id="playground" class="section playground-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Interactive API Playground</h2>
+        <p class="section-subtitle">Test how Smart Markdown Web Scraper cleans up web content for your AI models.</p>
+      </div>
+
+      <div class="playground-card">
+        <div class="url-input-bar">
+          <label for="scrape-url" class="input-label">Target URL:</label>
+          <input type="url" id="scrape-url" value="https://news.ycombinator.com" placeholder="https://example.com/article">
+          <button id="btn-test" class="btn btn-primary">Scrape Markdown</button>
+        </div>
+
+        <div class="playground-grid">
+          <!-- Left: Request Snippet -->
+          <div class="panel">
+            <div class="panel-header">
+              <span class="panel-title">Code Generator</span>
+              <div class="lang-tabs">
+                <button class="lang-tab active" data-lang="python">Python</button>
+                <button class="lang-tab" data-lang="javascript">Node.js</button>
+                <button class="lang-tab" data-lang="curl">cURL</button>
+              </div>
+            </div>
+            <div class="panel-body">
+              <pre><code id="code-snippet"># Python Example
+import requests
+
+url = "https://smart-markdown-web-scraper.p.rapidapi.com/scrape"
+payload = { "url": "https://news.ycombinator.com" }
+headers = {
+    "x-rapidapi-key": "YOUR_RAPIDAPI_KEY",
+    "x-rapidapi-host": "smart-markdown-web-scraper.p.rapidapi.com",
+    "Content-Type": "application/json"
+}
+
+response = requests.post(url, json=payload, headers=headers)
+print(response.json()["markdown"])</code></pre>
+            </div>
+          </div>
+
+          <!-- Right: Output Preview -->
+          <div class="panel">
+            <div class="panel-header">
+              <span class="panel-title">Scraped Output (Markdown)</span>
+              <span class="badge badge-success" id="output-badge">Ready</span>
+            </div>
+            <div class="panel-body">
+              <pre><code id="markdown-output"># Hacker News Top Stories
+
+1. **Show HN: Smart Markdown API for Web Scraping** (245 points)
+   *Discussion link:* [comments](https://news.ycombinator.com/item?id=123)
+   *Category:* Developer Tools | RAG Pipelines
+
+2. **Why Clean Markdown beats Raw HTML in LLM Prompting** (189 points)
+   *Author:* alex_dev | *Date:* Aug 2026
+
+---
+*Main content extracted successfully. All scripts, header links, and boilerplate removed.*</code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features" class="section features-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Built for Modern AI Engineers</h2>
+        <p class="section-subtitle">Why developers prefer Smart Markdown over raw scraping libraries</p>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">⚡</div>
+          <h3>Token Cost Optimization</h3>
+          <p>By stripping unnecessary DOM nodes, CSS, and JS boilerplate, your LLM prompt costs drop by up to 99% per API call.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🧠</div>
+          <h3>RAG Ready Output</h3>
+          <p>Clean headings (H1-H4), bullet points, and code block formatting make vector indexing and semantic search effortless.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🚀</div>
+          <h3>Ultra Fast Execution</h3>
+          <p>Hosted on high-speed cloud infrastructure with response times optimized for streaming AI agent loops.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🛡️</div>
+          <h3>RapidAPI Infrastructure</h3>
+          <p>Enterprise grade availability, automatic API key authentication, and transparent usage monitoring.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Section -->
+  <section id="pricing" class="section pricing-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Flexible Pricing Plans</h2>
+        <p class="section-subtitle">Choose the plan that fits your scraping scale. Subscriptions managed via RapidAPI.</p>
+      </div>
+
+      <div class="pricing-grid">
+        <div class="pricing-card">
+          <div class="plan-name">Basic / Free Tier</div>
+          <div class="plan-price">$0 <span>/ month</span></div>
+          <p class="plan-desc">Perfect for testing & prototyping AI projects.</p>
+          <ul class="plan-features">
+            <li>✔ 100 Free Requests / month</li>
+            <li>✔ Standard Markdown Extraction</li>
+            <li>✔ RapidAPI Dashboard Access</li>
+          </ul>
+          <a href="https://rapidapi.com/modialmadih/api/smart-markdown-web-scraper" target="_blank" class="btn btn-outline">Subscribe on RapidAPI</a>
+        </div>
+
+        <div class="pricing-card featured">
+          <div class="popular-badge">Most Popular</div>
+          <div class="plan-name">Pro Developer</div>
+          <div class="plan-price">$9.99 <span>/ month</span></div>
+          <p class="plan-desc">For active AI agents & production workflows.</p>
+          <ul class="plan-features">
+            <li>✔ 10,000 Requests / month</li>
+            <li>✔ High Rate Limits</li>
+            <li>✔ Fast Cloud Proxy Processing</li>
+            <li>✔ Priority RapidAPI Support</li>
+          </ul>
+          <a href="https://rapidapi.com/modialmadih/api/smart-markdown-web-scraper" target="_blank" class="btn btn-primary">Get Pro Access →</a>
+        </div>
+
+        <div class="pricing-card">
+          <div class="plan-name">Ultra Scale</div>
+          <div class="plan-price">$29.99 <span>/ month</span></div>
+          <p class="plan-desc">For heavy web crawling & enterprise RAG apps.</p>
+          <ul class="plan-features">
+            <li>✔ 50,000+ Requests / month</li>
+            <li>✔ Ultra Low Latency</li>
+            <li>✔ Dedicated Throughput</li>
+          </ul>
+          <a href="https://rapidapi.com/modialmadih/api/smart-markdown-web-scraper" target="_blank" class="btn btn-outline">Subscribe on RapidAPI</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div>
+        <p class="footer-logo">Smart Markdown Web Scraper API</p>
+        <p class="footer-sub">Convert Web Pages into LLM-Ready Markdown.</p>
+      </div>
+      <div class="footer-cta">
+        <a href="https://rapidapi.com/modialmadih/api/smart-markdown-web-scraper" target="_blank" class="btn btn-primary">Subscribe on RapidAPI Hub</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

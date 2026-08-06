@@ -1,0 +1,115 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Smart Markdown Web Scraper & Reader API",
+    "description": "Extracts clean main content (title, excerpt, markdown, author) from any webpage URL. Optimized for AI agents, RAG pipelines, and LLM applications.",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "http://129.121.97.82:3000",
+      "description": "Production VPS Gateway"
+    }
+  ],
+  "paths": {
+    "/health": {
+      "get": {
+        "summary": "Health check",
+        "description": "Checks if the API is active and running",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": { "type": "string", "example": "ok" },
+                    "timestamp": { "type": "string", "example": "2026-07-29T09:43:26.156Z" }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/read": {
+      "get": {
+        "summary": "Extract main content as Markdown",
+        "description": "Fetches the HTML of the URL, strips scripts/ads/styling, and converts the clean main text into Markdown.",
+        "parameters": [
+          {
+            "name": "url",
+            "in": "query",
+            "required": true,
+            "description": "The URL of the webpage to scrape and convert to markdown",
+            "schema": {
+              "type": "string",
+              "format": "uri",
+              "example": "https://en.wikipedia.org/wiki/Passive_income"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Extraction",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "title": { "type": "string", "example": "Passive income" },
+                    "byline": { "type": "string", "nullable": true, "example": "Wikipedia contributors" },
+                    "dir": { "type": "string", "nullable": true, "example": "ltr" },
+                    "excerpt": { "type": "string", "nullable": true, "example": "Income derived from enterprise in which target is not actively involved..." },
+                    "siteName": { "type": "string", "nullable": true, "example": "Wikipedia" },
+                    "length": { "type": "integer", "example": 14205 },
+                    "url": { "type": "string", "example": "https://en.wikipedia.org/wiki/Passive_income" },
+                    "markdown": { "type": "string", "example": "# Passive Income..." }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Missing or invalid URL"
+          },
+          "422": {
+            "description": "Failed to extract readable content from target webpage"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        }
+      },
+      "post": {
+        "summary": "Extract main content as Markdown (POST)",
+        "description": "Extracts clean content as Markdown using a JSON request body.",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": ["url"],
+                "properties": {
+                  "url": {
+                    "type": "string",
+                    "format": "uri",
+                    "example": "https://en.wikipedia.org/wiki/Passive_income"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Extraction"
+          }
+        }
+      }
+    }
+  }
+}
