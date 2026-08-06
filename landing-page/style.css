@@ -94,14 +94,18 @@ body {
   border: none;
 }
 
-.btn-primary {
-  background: linear-gradient(135deg, var(--primary), var(--accent));
-  color: #fff;
-  box-shadow: 0 4px 14px var(--accent-glow);
+.btn-primary,
+.nav-links a.btn-primary,
+.nav-links a.btn {
+  background: linear-gradient(135deg, var(--primary), var(--violet, #8b5cf6));
+  color: #ffffff !important;
+  box-shadow: 0 4px 14px var(--primary-glow, rgba(99, 102, 241, 0.4));
 }
 
-.btn-primary:hover {
-  opacity: 0.92;
+.btn-primary:hover,
+.nav-links a.btn-primary:hover {
+  opacity: 0.95;
+  color: #ffffff !important;
   transform: translateY(-1px);
 }
 
